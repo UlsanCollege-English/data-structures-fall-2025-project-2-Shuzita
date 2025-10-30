@@ -1,7 +1,4 @@
-# src/io_utils.py
-"""CSV load/save helpers for (word, score) pairs.
-The file format is two columns without header: word,score
-"""
+"""CSV load/save helpers for (word, score) pairs."""
 
 import csv
 
@@ -18,6 +15,7 @@ def load_csv(path):
                 s = 0.0
             words.append((w, s))
     return words
+
 
 def save_csv(path, items):
     with open(path, 'w', newline='', encoding='utf-8') as f:
